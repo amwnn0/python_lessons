@@ -3,7 +3,7 @@ import sqlite3 as sq
 
 def read_ava(n):
     try:
-        with open(f"sql/avas/{n}.png", "rb") as ava:
+        with open(f"avas/{n}.png", "rb") as ava:
             return ava.read()
     except IOError as e:
         print(e)
@@ -20,7 +20,7 @@ def write_ava(name, data):
     return True
 
 
-with sq.connect("sql/cars.db") as con:
+with sq.connect("cars.db") as con:
     con.row_factory = sq.Row
     cur = con.cursor()
 

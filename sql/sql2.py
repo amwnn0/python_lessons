@@ -8,7 +8,7 @@ cars = [
     ("Bentley", 350000),
 ]
 
-with sq.connect("sql/cars.db") as con:
+with sq.connect("cars.db") as con:
     cur = con.cursor()
 
     cur.execute(
