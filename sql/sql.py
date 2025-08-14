@@ -1,7 +1,6 @@
 import sqlite3 as sq
 
-
-with sq.connect("sql/lesson.db") as db:
+with sq.connect("lesson.db") as db:
     cur = db.cursor()
     # cur.execute("""DROP TABLE IF EXISTS users""")
     cur.execute(

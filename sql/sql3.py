@@ -2,7 +2,7 @@ import sqlite3 as sq
 
 con = None
 try:
-    con = sq.connect("sql/cars.db")
+    con = sq.connect("cars.db")
     cur = con.cursor()
 
     cur.executescript(
