@@ -25,6 +25,12 @@ class EvenLogFilter(logging.Filter):
     def filter(self, record):
         return not record.i % 2
 
+class CriticalLogFilter(logging.Filter):
+    ...
+
+class DebugWarningFilter(logging.Filter):
+    ...
+
 logger1 = logging.Logger(__name__)
 stderr_handler1 = logging.StreamHandler()
 logger1.addFilter(EvenLogFilter())

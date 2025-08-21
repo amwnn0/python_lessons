@@ -1,13 +1,14 @@
 import logging
+import sys
 
 
-from aiogram_lessons.logging_3_filter import ErrorLogFilter
+from aiogram_lessons.logging_3_filter import ErrorLogFilter, CriticalLogFilter, DebugWarningFilter
 
 logging_config = {
     'version': 1,
     'disable_existing_loggers': True,
     'formatters': {
-        'default': {'format': #%(levelname)-8s %(name)s:%(funcName)s - %(message)s'
+        'default': {'format': '#%(levelname)-8s %(name)s:%(funcName)s - %(message)s'
         },
         'formatter1': {'format': '[%(asctime)s] #%(levelname)-8s %(filename)s:'
                       '%(lineno)d - %(name)s:%(funcName)s - %(message)s'
