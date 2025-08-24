@@ -2,7 +2,7 @@ import asyncio
 import os
 
 from aiogram import Bot, Dispatcher
-from aiogram.filters import Command
+from aiogram.filters import Command, BaseFilter
 from aiogram.types import Message
 from dotenv import load_dotenv
 from random import randint
@@ -125,8 +125,7 @@ I reply: "Correct! You earned 400 points!"
 🎮 COMMANDS:
 /start - Begin new game
 /help - Show these instructions
-/score - Check your total points
-/leaderboard - See top players''')
+/score - Check your total points''')
 
 
 @dp.message(Command(commands='score'))
