@@ -205,3 +205,5 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+/aiogram_lessons/numbers.db
+/aiogram_lessons/paper_rock_scissors_bot/p_r_s.db

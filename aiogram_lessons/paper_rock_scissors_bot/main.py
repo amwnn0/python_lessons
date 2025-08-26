@@ -4,6 +4,7 @@ import logging
 from aiogram import Bot, Dispatcher
 from config.config import Config, load_config
 from handlers import other, user
+from context.context import app_context
 
 
 async def main() -> None:
@@ -17,6 +18,9 @@ async def main() -> None:
     # Initialize bot and dispatcher
     bot = Bot(token=config.bot.token)
     dp = Dispatcher()
+    # Initialize context
+    await app_context.initialize()
+    dp['app_context'] = app_context
     # Register routers in dp
     dp.include_router(user.router)
     dp.include_router(other.router)
