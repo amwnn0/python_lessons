@@ -1,4 +1,5 @@
 LEXICON_RU: dict[str, str] = {
-    '/start': '...',
-    '/help': '...'
+    '/start': '...start',
+    '/help': '...help',
+    '/start(new)': '...start.new'
 }

@@ -1,8 +1,4 @@
-import asyncio
-from aiogram.fsm.storage.memory import MemoryStorage
 import aiosqlite
-
-db = None
 
 
 async def init_db():
@@ -23,4 +19,10 @@ async def init_db():
 async def get_user_ids():
     async with db.execute('''SELECT chat_id FROM users''') as cursor:
         ids = await cursor.fetchall()
-    return ids
+    return [id[0] for id in ids]
+
+
+async def add_user(chat_id, first_name, username):
+    await db.execute('''INSERT INTO users (chat_id, name, username) VALUES (?, ?, ?)''',
+                     (chat_id, first_name, username))
+    await db.commit()
