@@ -10,4 +10,7 @@ LEXICON_RU: dict[str, str] = {
     'paper': 'paper',
     'rock': 'rock',
     'scissors': 'scissors',
+    'same_answer': '...same_answer',
+    'win': '...win',
+    'lose': '...lose',
 }
