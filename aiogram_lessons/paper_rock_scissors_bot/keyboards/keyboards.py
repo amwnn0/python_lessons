@@ -9,7 +9,7 @@ accept_kb_builder.row(
     KeyboardButton(text=LEXICON_RU['n_button']),
     width=2
 )
-accept_keyboard = accept_kb_builder.as_markup(resize_keyboard=True)
+accept_keyboard = accept_kb_builder.as_markup(resize_keyboard=True, one_time_keyboard=True)
 
 choose_kb_builder = ReplyKeyboardBuilder()
 choose_kb_builder.row(
@@ -18,4 +18,4 @@ choose_kb_builder.row(
     KeyboardButton(text=LEXICON_RU['scissors']),
     width=3
 )
-choose_keyboard = choose_kb_builder.as_markup(resize_keyboard=True, one_time_keyboard=True)
+choose_keyboard = choose_kb_builder.as_markup(resize_keyboard=True)
