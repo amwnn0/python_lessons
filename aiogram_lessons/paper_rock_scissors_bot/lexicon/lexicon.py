@@ -13,4 +13,5 @@ LEXICON_RU: dict[str, str] = {
     'same_answer': '...same_answer',
     'win': '...win',
     'lose': '...lose',
+    'play_again': '...play_again',
 }

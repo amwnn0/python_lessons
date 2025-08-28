@@ -68,7 +68,7 @@ async def process_game_answer(message: Message):
                 await message.answer(LEXICON_RU['lose'])
             else:
                 await message.answer(LEXICON_RU['win'])
-    ...
+    await message.answer(text=LEXICON_RU['play_again'], reply_markup=accept_keyboard)
 
 
 # For other messages
